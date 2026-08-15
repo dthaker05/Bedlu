@@ -4,7 +4,9 @@
  */
 class NavratriApp {
   constructor() {
-    this.currentView = "login";
+    this.currentView = "home";
+    this.pendingView = null;
+    this.protectedViews = ["booking", "admin", "scanner", "my-bookings"];
     this.activePassesModal = [];
   }
 
@@ -20,13 +22,8 @@ class NavratriApp {
     this.setupScrollListeners();
     this.updateAuthUI();
 
-    // Check if user is authenticated
-    if (auth.isAuthenticated()) {
-      const hash = window.location.hash.replace("#", "");
-      this.switchView(hash || "home");
-    } else {
-      this.switchView("login");
-    }
+    const hash = window.location.hash.replace("#", "");
+    this.switchView(hash || "home");
 
     // ☁️ Sync latest pass data from Supabase cloud on every page load
     db.syncFromCloud().catch(e => console.warn("Cloud sync skipped:", e));
@@ -56,7 +53,7 @@ class NavratriApp {
       // 3. Mobile Floating Booking Button
       const mobileFloatingBtn = document.getElementById("mobile-floating-booking-btn");
       if (mobileFloatingBtn) {
-        if (window.scrollY > 300 && auth.isAuthenticated()) {
+        if (window.scrollY > 300) {
           mobileFloatingBtn.classList.add("visible");
         } else {
           mobileFloatingBtn.classList.remove("visible");
@@ -87,12 +84,13 @@ class NavratriApp {
   }
 
   switchView(viewId) {
-    // STRICT AUTHENTICATION GUARD — unauthenticated users always see the login page
-    if (!auth.isAuthenticated()) {
+    const validViews = ["home", "schedule", "past-events", "booking", "scanner", "contact", "admin", "blueprint", "login", "my-bookings"];
+    if (!validViews.includes(viewId)) viewId = "home";
+
+    // Guard protected views for unauthenticated users
+    if (this.protectedViews.includes(viewId) && !auth.isAuthenticated()) {
+      this.pendingView = viewId;
       viewId = "login";
-    } else {
-      const validViews = ["home", "schedule", "past-events", "booking", "scanner", "contact", "admin", "blueprint"];
-      if (!validViews.includes(viewId)) viewId = "home";
     }
 
     this.currentView = viewId;
@@ -164,7 +162,7 @@ class NavratriApp {
     const isAuth = auth.isAuthenticated();
 
     if (navLinksWrapper) {
-      navLinksWrapper.style.display = isAuth ? "flex" : "none";
+      navLinksWrapper.style.display = "flex";
     }
 
     if (logoutBtnContainer) {
@@ -195,9 +193,9 @@ class NavratriApp {
         `;
       } else {
         logoutBtnContainer.innerHTML = `
-          <span style="font-size:12px; color:#ef4444; font-weight:700; background:rgba(239,68,68,0.12); padding:5px 12px; border-radius:20px; border:1px solid rgba(239,68,68,0.3);">
-            🔒 Not Authenticated
-          </span>
+          <a href="#login" class="btn btn-secondary btn-sm route-btn" data-view="login" style="display:flex; align-items:center; gap:5px; padding: 6px 12px; text-decoration:none;">
+            🔑 Sign In
+          </a>
         `;
       }
     }
@@ -505,6 +503,16 @@ class NavratriApp {
     }
   }
 
+  redirectAfterAuth() {
+    if (this.pendingView) {
+      const target = this.pendingView;
+      this.pendingView = null;
+      this.switchView(target);
+    } else {
+      this.switchView("home");
+    }
+  }
+
   async handleLoginSubmit(e) {
     e.preventDefault();
     const email = document.getElementById("login-email").value;
@@ -515,13 +523,7 @@ class NavratriApp {
     if (res.success) {
       const roleLabel = res.user.role.replace("_", " ").toUpperCase();
       alert(`🎉 Welcome back, ${res.user.name}! Signed in as ${roleLabel}.`);
-      if (res.user.role === "super_admin" || res.user.role === "admin") {
-        this.switchView("admin");
-      } else if (res.user.role === "gate_scanner") {
-        this.switchView("scanner");
-      } else {
-        this.switchView("home");
-      }
+      this.redirectAfterAuth();
     } else {
       alert("Login failed: " + res.message);
     }
@@ -538,7 +540,7 @@ class NavratriApp {
 
     if (res.success) {
       alert(`✨ Account created successfully! Welcome, ${res.user.name}. Access unlocked!`);
-      this.switchView("home");
+      this.redirectAfterAuth();
     } else {
       alert("Registration Error: " + res.message);
     }
@@ -548,13 +550,7 @@ class NavratriApp {
     await auth.setRole(role);
     const roleTitle = role.toUpperCase().replace("_", " ");
     alert(`⚡ Authenticated as: ${roleTitle}. Platform Unlocked!`);
-    if (role === "super_admin" || role === "admin") {
-      this.switchView("admin");
-    } else if (role === "gate_scanner") {
-      this.switchView("scanner");
-    } else {
-      this.switchView("home");
-    }
+    this.redirectAfterAuth();
   }
 }
 
