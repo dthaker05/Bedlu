@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEDLU | Premium Pre-Navratri Celebration by United 18</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Experience BEDLU - Sidhpur's most divine and luxurious Pre-Navratri celebration presented by United 18 in Sidhpur. Get instant digital QR passes, celebrity line-ups, and live gate access." />
+  <meta name="keywords"
+    content="BEDLU, United 18, Pre-Navratri 2026, Garba Mahotsav, Sidhpur Garba, Digital Pass, QR Entry, Royal Garba, Falguni Pathak, Garba Event Booking" />
+  <meta name="author" content="United 18 Events" />
+  <meta name="theme-color" content="#120421" />
+  <link rel="canonical" href="https://queryquill.in/" />
+
+  <!-- OpenGraph Meta Tags for Social Sharing -->
+  <meta property="og:title" content="BEDLU | Premium Pre-Navratri Celebration by United 18" />
+  <meta property="og:description"
+    content="Join over 50,000 dainik Garba lovers for the biggest Pre-Navratri celebration of 2026. Book digital passes now!" />
+  <meta property="og:image" content="https://queryquill.in/img/bedlu-logo.jpg" />
+  <meta property="og:url" content="https://queryquill.in/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BEDLU Pre-Navratri 2026" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BEDLU | Premium Pre-Navratri Celebration by United 18" />
+  <meta name="twitter:description"
+    content="Experience Gujarat's most divine Pre-Navratri event with BEDLU by United 18." />
+  <meta name="twitter:image" content="https://queryquill.in/img/bedlu-logo.jpg" />
+
+  <!-- JSON-LD Event Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "BEDLU - Premium Pre-Navratri Celebration",
+    "startDate": "2026-10-10T19:00:00+05:30",
+    "endDate": "2026-10-18T23:59:59+05:30",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Shreesthal English School Ground",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shreesthal English School, Near M.P highschool, nadi road, Sidhpur",
+        "addressLocality": "Sidhpur",
+        "postalCode": "384151",
+        "addressRegion": "GJ",
+        "addressCountry": "IN"
+      }
+    },
+    "image": [
+      "https://queryquill.in/img/bedlu-logo.jpg"
+    ],
+    "description": "BEDLU is India's flagship Pre-Navratri celebration presented by United 18, featuring traditional Garba Raas, celebrity guests, and instant digital QR gate entry.",
+    "organizer": {
+      "@type": "Organization",
+      "name": "United 18",
+      "url": "https://queryquill.in/"
+    }
+  }
+  </script>
+
+  <!-- Modern Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Supabase Free Cloud DB SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- HTML5 Camera QR Code Scanner SDK -->
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <!-- Razorpay Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- Top Scroll Progress Indicator Bar -->
+  <div id="scroll-progress-bar"></div>
+
+  <!-- Back to Top & Mobile Floating CTA Buttons -->
+  <button id="back-to-top" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to Top">↑</button>
+  <a href="#booking" id="mobile-floating-booking-btn" class="btn btn-magenta route-btn select-tier-btn"
+    data-view="booking" data-tier="season">
+    🎟️ Book BEDLU Pass
+  </a>
+
+  <!-- =================================================================== -->
+  <!-- 0. MODERN ANIMATED PRELOADER SCREEN (2-3 seconds) -->
+  <!-- =================================================================== -->
+  <div id="app-loader">
+    <div class="spark-particles-container">
+      <div class="spark-particle" style="width: 6px; height: 6px; left: 15%; animation-duration: 4s;"></div>
+      <div class="spark-particle" style="width: 10px; height: 10px; left: 35%; animation-duration: 3s;"></div>
+      <div class="spark-particle" style="width: 8px; height: 8px; left: 65%; animation-duration: 5s;"></div>
+      <div class="spark-particle" style="width: 12px; height: 12px; left: 85%; animation-duration: 3.5s;"></div>
+    </div>
+    <div class="loader-content">
+      <div class="loader-mandala-wrap">
+        <svg class="loader-mandala-svg" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="46" fill="none" stroke="#ffd700" stroke-width="1.5" />
+          <circle cx="50" cy="50" r="38" fill="none" stroke="#e91e63" stroke-width="1" />
+          <path d="M50 4 L50 96 M4 L50 L96 50 M17 17 L83 83 M17 83 L83 17" stroke="#ffd700" stroke-width="0.8"
+            opacity="0.6" />
+        </svg>
+        <img src="img/bedlu-logo.jpg" alt="BEDLU Logo" class="loader-logo-img" />
+      </div>
+      <span class="loader-brand-sub">PRESENTED BY UNITED 18</span>
+      <h1 class="loader-brand-title gold-gradient-text">BEDLU</h1>
+      <div class="loader-progress-bar">
+        <div class="loader-progress-fill" id="app-loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo route-btn" data-view="home">
+        <img src="img/bedlu-logo.jpg" alt="BEDLU Logo" class="brand-logo-img" />
+        <div class="brand-text">
+          <h2 class="gold-gradient-text">BEDLU</h2>
+          <span>Presented by United 18</span>
+        </div>
+      </a>
+
+      <div class="nav-links-wrapper" id="nav-links-wrapper">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active" data-view="home">Home</a></li>
+          <li><a href="#schedule" class="nav-link" data-view="schedule">Schedule</a></li>
+          <li><a href="#past-events" class="nav-link" data-view="past-events">Gallery</a></li>
+          <li><a href="#instagram" class="nav-link" data-view="home"
+              onclick="document.getElementById('instagram').scrollIntoView({behavior:'smooth'})">Instagram</a></li>
+          <li><a href="#booking" class="nav-link select-tier-btn" data-tier="season">Book Pass</a></li>
+          <li><a href="#contact" class="nav-link" data-view="contact">Contact</a></li>
+          <li><a href="#scanner" class="nav-link" data-view="scanner" id="nav-scanner-link">Gate Scanner</a></li>
+          <li><a href="#admin" class="nav-link" data-view="admin" id="nav-admin-link">Admin Live</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-actions">
+        <!-- Audio Synth Toggle -->
+        <button class="btn btn-secondary btn-sm" id="audio-toggle-btn" onclick="app.toggleGarbaMusic()">
+          🎵 Play Garba Beats
+        </button>
+
+        <!-- Authentication & User Status -->
+        <div id="auth-nav-action-container"></div>
+
+        <button class="mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle Navigation">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN VIEWS CONTAINER -->
+  <main class="container" style="padding-top: 30px; padding-bottom: 60px;">
+
+    <!-- =================================================================== -->
+    <!-- 1. LANDING LOGIN & REGISTRATION VIEW (FIRST PAGE FOR ALL USERS) -->
+    <!-- =================================================================== -->
+    <section id="view-login" class="page-view active">
+      <div style="max-width: 560px; margin: 0 auto;">
+        <div class="section-header" style="margin-bottom: 25px;">
+          <h2 class="gold-gradient-text">Welcome to BEDLU 2026</h2>
+          <p>Presented by United 18 • Register your account or sign in to access digital QR passes, schedule & gate
+            portals.</p>
+        </div>
+
+        <div class="glass-card">
+          <!-- Auth Tabs -->
+          <div style="display: flex; border-bottom: 1px solid var(--glass-border); margin-bottom: 25px;">
+            <button class="btn btn-secondary btn-sm auth-tab-btn active" id="auth-tab-register"
+              onclick="app.switchAuthTab('register')"
+              style="flex: 1; border-radius: 0; border: none; border-bottom: 2px solid var(--magenta-neon);">
+              📝 Create New Account
+            </button>
+            <button class="btn btn-secondary btn-sm auth-tab-btn" id="auth-tab-login"
+              onclick="app.switchAuthTab('login')" style="flex: 1; border-radius: 0; border: none;">
+              🔑 Existing Account Login
+            </button>
+          </div>
+
+          <!-- Registration Form -->
+          <form id="auth-register-form" onsubmit="app.handleRegisterSubmit(event)">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="reg-name" class="form-control" required placeholder="Aarav Sharma" />
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="reg-email" class="form-control" required placeholder="aarav@example.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Mobile Number</label>
+              <input type="tel" id="reg-phone" class="form-control" required placeholder="+91 98765 43210" />
+            </div>
+
+            <div class="form-group">
+              <label>Create Account Password</label>
+              <input type="password" id="reg-password" class="form-control" required placeholder="••••••••" />
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              ✨ Register & Enter BEDLU Platform
+            </button>
+          </form>
+
+          <!-- Login Form -->
+          <form id="auth-login-form" onsubmit="app.handleLoginSubmit(event)" style="display: none;">
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="login-email" class="form-control" required placeholder="your@email.com" />
+            </div>
+
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" id="login-password" class="form-control" required placeholder="••••••••" />
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              🔒 Sign In
+            </button>
+          </form>
+
+          <!-- Quick Roles Login for Testing
+          <div style="margin-top: 25px; pt: 15px; border-top: 1px solid var(--glass-border); text-align: center;">
+            <small style="color: var(--gold-primary); font-weight: 700; letter-spacing: 1px;">QUICK DEMO ONE-CLICK LOGIN:</small>
+            <div style="display: flex; gap: 8px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">
+              <button class="btn btn-secondary btn-sm" onclick="app.quickDemoLogin('visitor')">👤 Attendee Login</button>
+              <button class="btn btn-secondary btn-sm" onclick="app.quickDemoLogin('gate_scanner')">📷 Gate Staff Login</button>
+              <button class="btn btn-secondary btn-sm" onclick="app.quickDemoLogin('super_admin')">⚡ Admin Live Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+          <!-- =================================================================== -->
+          <!-- 2. HOME VIEW -->
+          <!-- =================================================================== -->
+          <section id="view-home" class="page-view">
+
+            <!-- Visually Stunning Full-Screen Cinematic Hero Section -->
+            <div class="cinematic-hero-section">
+              <!-- Single-Asset Media Wrapper (Video / Animation ready) -->
+              <div class="hero-bg-media-wrapper">
+                <video id="hero-bg-video" autoplay loop muted playsinline poster="img/navratri-poster-style.png">
+                  <!-- Replace video source URL below with your video file when ready -->
+                  <source src="" type="video/mp4" />
+                </video>
+                <div class="hero-animated-sky"></div>
+              </div>
+
+              <!-- Rotating Mandala Ornaments -->
+              <svg class="hero-mandala-left" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#ffd700" stroke-width="1" />
+                <path d="M50 0 L50 100 M0 50 L100 50 M15 15 L85 85 M15 85 L85 15" stroke="#e91e63" stroke-width="0.8"
+                  opacity="0.6" />
+              </svg>
+              <svg class="hero-mandala-right" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="46" fill="none" stroke="#ff6b00" stroke-width="1" />
+                <path d="M50 0 L50 100 M0 50 L100 50" stroke="#ffd700" stroke-width="0.8" opacity="0.6" />
+              </svg>
+
+              <div class="hero-content-layer">
+                <div class="festive-banner-badge">✨ PRESENTED BY UNITED 18 • PRE-NAVARATRI CELEBRATION ✨</div>
+
+                <!-- Official BEDLU Logo -->
+                <div class="hero-logo-container">
+                  <img src="img/bedlu-logo.jpg" alt="BEDLU Official Logo by United 18" class="hero-bedlu-logo" />
+                </div>
+
+                <h1 class="hero-title">
+                  <span class="gold-gradient-text">BEDLU</span><br />
+                  <span style="font-size: 26px; font-weight: 700; color: var(--text-muted);">Premium Pre-Navratri
+                    Celebration</span>
+                </h1>
+                <p class="hero-description">
+                  Experience Sidhpur's most divine and luxurious Pre-Navratri event. Featuring traditional Garba Raas,
+                  celebrity performances, royal ambiance, and instant digital QR entry passes.
+                </p>
+
+                <!-- Placeholder Feature Cards (Venue, Theme, Sponsors) -->
+                <div class="hero-features-grid">
+                  <div class="hero-feat-card">
+                    <h4>📍 Venue</h4>
+                    <p>Shreesthal English School Ground</p>
+                    <small>Near M.P High School, Sidhpur</small>
+                  </div>
+                  <div class="hero-feat-card">
+                    <h4>✨ Theme</h4>
+                    <p>Royal Heritage & Modern Fusion</p>
+                    <small>Traditional Cultural Elegance</small>
+                  </div>
+                  <div class="hero-feat-card">
+                    <h4>🤝 Sponsors</h4>
+                    <p>United 18 & Brand Partners</p>
+                    <small>Title & Official Sponsors</small>
+                  </div>
+                </div>
+
+                <!-- Live Countdown Timer -->
+                <div class="countdown-container">
+                  <div class="timer-box">
+                    <div class="timer-val" id="cd-days">00</div>
+                    <div class="timer-label">Days</div>
+                  </div>
+                  <div class="timer-box">
+                    <div class="timer-val" id="cd-hours">00</div>
+                    <div class="timer-label">Hours</div>
+                  </div>
+                  <div class="timer-box">
+                    <div class="timer-val" id="cd-mins">00</div>
+                    <div class="timer-label">Mins</div>
+                  </div>
+                  <div class="timer-box">
+                    <div class="timer-val" id="cd-secs">00</div>
+                    <div class="timer-label">Secs</div>
+                  </div>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; margin-top: 30px;">
+                  <a href="#booking" class="btn btn-primary route-btn select-tier-btn" data-view="booking"
+                    data-tier="season">
+                    🎟️ Book Pass Now
+                  </a>
+                  <a href="#schedule" class="btn btn-secondary route-btn" data-view="schedule">
+                    📅 View Schedule
+                  </a>
+                </div>
+              </div>
+
+              <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <span>↓</span>
+              </div>
+            </div>
+
+            <!-- Live Pass Availability Section -->
+            <div id="live-pass-availability" class="glass-card" style="margin-bottom: 50px;">
+              <div class="section-header" style="margin-bottom: 25px;">
+                <h2 class="gold-gradient-text">Live Pass Availability</h2>
+                <p>Real-time ticket counter & festival pass capacity indicator.</p>
+              </div>
+
+              <div class="availability-grid">
+                <div class="avail-stats-cards">
+                  <div class="avail-stat-card featured">
+                    <small style="color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Total
+                      Capacity</small>
+                    <div class="avail-stat-val" id="avail-total-cap">1,200</div>
+                    <small style="color: var(--gold-primary);">Total Passes Allocated</small>
+                  </div>
+                  <div class="avail-stat-card">
+                    <small style="color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Passes
+                      Booked</small>
+                    <div class="avail-stat-val" id="avail-booked-count" style="color: var(--magenta-neon);">0</div>
+                    <small style="color: var(--magenta-neon);">Issued to Attendees</small>
+                  </div>
+                  <div class="avail-stat-card">
+                    <small
+                      style="color: var(--text-muted); font-weight: 700; text-transform: uppercase;">Remaining</small>
+                    <div class="avail-stat-val" id="avail-remaining-count" style="color: #10b981;">1,200</div>
+                    <small style="color: #10b981;">Available for Booking</small>
+                  </div>
+                </div>
+
+                <!-- Circular SVG Progress Indicator -->
+                <div class="avail-ring-container">
+                  <div class="ring-svg-wrapper">
+                    <svg width="160" height="160" viewBox="0 0 120 120">
+                      <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="10" />
+                      <circle id="avail-progress-ring" cx="60" cy="60" r="54" fill="none" stroke="url(#goldGradient)"
+                        stroke-width="10" stroke-linecap="round" stroke-dasharray="339.29" stroke-dashoffset="339.29"
+                        style="transition: stroke-dashoffset 1s ease;" />
+                      <defs>
+                        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                          <stop offset="0%" stop-color="#ffd700" />
+                          <stop offset="50%" stop-color="#e91e63" />
+                          <stop offset="100%" stop-color="#ff6b00" />
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                    <div class="ring-center-text">
+                      <h3 id="avail-ring-percentage">0%</h3>
+                      <span>Booked</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dedicated Event Theme Section -->
+            <div id="event-theme" class="glass-card" style="margin-bottom: 50px;">
+              <div class="section-header" style="margin-bottom: 20px;">
+                <h2 class="gold-gradient-text">Festival Theme</h2>
+                <p>Royal Heritage & Modern Fusion — Celebrating Gujarat's Rich Traditions with Modern Luxury.</p>
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 25px; align-items: center;">
+                <div>
+                  <h3 style="color: var(--gold-primary); font-size: 22px; margin-bottom: 12px;">Divine Ambiance &
+                    Traditional Elegance</h3>
+                  <p style="color: var(--text-muted); line-height: 1.7; font-size: 15px;">
+                    BEDLU brings together the splendor of authentic Gujarati Garba, radiant floral rangolis, glowing
+                    lantern displays, and energetic live dhol beats under a starry sky.
+                  </p>
+                </div>
+                <div
+                  style="background: rgba(255,255,255,0.03); border: 1px solid var(--glass-border); border-radius: var(--radius-md); padding: 20px; text-align: center;">
+                  <img src="img/navratri-poster-style.png" alt="Festival Style Inspiration"
+                    style="width: 100%; height: 180px; object-fit: cover; border-radius: var(--radius-sm);" />
+                  <small style="color: var(--gold-primary); font-weight: 700; display: block; margin-top: 10px;">ROYAL
+                    HERITAGE DECOR & MUSIC</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Venue & Map Section (Sidhpur) -->
+            <div id="event-venue" class="glass-card" style="margin-bottom: 50px;">
+              <div class="section-header" style="margin-bottom: 20px;">
+                <h2 class="gold-gradient-text">Venue & Location</h2>
+                <p>Shreesthal English School Ground, Near M.P High School, Nadi Road, Sidhpur</p>
+              </div>
+              <div class="venue-grid">
+                <iframe class="map-frame"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.7183619578644!2d72.3788!3d23.9167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395ce68123456789%3A0x123456789abcdef!2sSidhpur%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                  loading="lazy" title="Venue Google Map Placeholder"></iframe>
+                <div style="display: flex; flex-direction: column; gap: 15px; justify-content: center;">
+                  <div
+                    style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: var(--radius-sm); border: 1px solid var(--glass-border);">
+                    <h4 style="color: var(--gold-primary);">🚗 Parking Facility</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Spacious car & two-wheeler
+                      parking facility with security supervision.</p>
+                  </div>
+                  <div
+                    style="background: rgba(255,255,255,0.03); padding: 15px; border-radius: var(--radius-sm); border: 1px solid var(--glass-border);">
+                    <h4 style="color: var(--gold-primary);">📍 Nearest Landmark</h4>
+                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Near M.P High School, Nadi
+                      Road, Sidhpur, Gujarat 384151.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sponsors Section (Coming Soon Placeholders) -->
+            <div id="event-sponsors" class="glass-card" style="margin-bottom: 50px;">
+              <div class="section-header" style="margin-bottom: 25px;">
+                <h2 class="gold-gradient-text">Our Valued Partners</h2>
+                <p>Presented by United 18 in collaboration with official brand sponsors.</p>
+              </div>
+              <div class="sponsors-grid">
+                <div class="sponsor-card title-sponsor">
+                  <small
+                    style="color: var(--gold-primary); font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">PRESENTING
+                    TITLE SPONSOR</small>
+                  <div
+                    style="display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 10px;">
+                    <img src="img/bedlu-logo.jpg" alt="United 18 Logo"
+                      style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--gold-primary);" />
+                    <h3 style="font-size: 28px; color: #fff;">UNITED 18</h3>
+                  </div>
+                  <small style="color: var(--text-muted); display: block; margin-top: 6px;">Official Event Producer &
+                    Title Partner</small>
+                </div>
+                <div class="sponsor-card">
+                  <h4 style="color: var(--gold-primary);">Co-Sponsor</h4>
+                  <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">Sponsor Coming Soon</p>
+                </div>
+                <div class="sponsor-card">
+                  <h4 style="color: var(--gold-primary);">Powered By</h4>
+                  <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">Sponsor Coming Soon</p>
+                </div>
+                <div class="sponsor-card">
+                  <h4 style="color: var(--gold-primary);">Media Partner</h4>
+                  <p style="color: var(--text-muted); font-size: 14px; margin-top: 6px;">Sponsor Coming Soon</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instagram Section Placeholder -->
+            <div id="instagram" class="glass-card">
+              <div class="section-header" style="margin-bottom: 20px;">
+                <h2 class="gold-gradient-text">Follow Us On Instagram</h2>
+                <p>Tag @bedlu.official to get featured on our live festival screen!</p>
+              </div>
+
+              <div class="instagram-grid">
+                <div class="insta-card">
+                  <img src="img/navratri-poster-style.png" alt="Instagram Post 1" class="insta-img" />
+                  <div class="insta-overlay">
+                    <span style="font-size: 24px;">📸</span>
+                    <small style="font-weight: 700; margin-top: 4px;">@bedlu.official</small>
+                  </div>
+                </div>
+                <div class="insta-card">
+                  <img src="img/bedlu-logo.jpg" alt="Instagram Post 2" class="insta-img" />
+                  <div class="insta-overlay">
+                    <span style="font-size: 24px;">💃</span>
+                    <small style="font-weight: 700; margin-top: 4px;">#BEDLU2026</small>
+                  </div>
+                </div>
+                <div class="insta-card">
+                  <img src="img/navratri-poster-style.png" alt="Instagram Post 3" class="insta-img" />
+                  <div class="insta-overlay">
+                    <span style="font-size: 24px;">✨</span>
+                    <small style="font-weight: 700; margin-top: 4px;">Pre-Navratri Vibes</small>
+                  </div>
+                </div>
+                <div class="insta-card">
+                  <img src="img/bedlu-logo.jpg" alt="Instagram Post 4" class="insta-img" />
+                  <div class="insta-overlay">
+                    <span style="font-size: 24px;">🎉</span>
+                    <small style="font-weight: 700; margin-top: 4px;">United 18</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <!-- =================================================================== -->
+          <!-- 3. DEDICATED EVENT SCHEDULE VIEW (/schedule) -->
+          <!-- =================================================================== -->
+          <section id="view-schedule" class="page-view">
+            <div class="section-header">
+              <h2 class="gold-gradient-text">BEDLU Event Schedule</h2>
+              <p>Vertical timeline of divine performances, Aarti ceremonies, and Raas celebrations.</p>
+            </div>
+
+            <div class="timeline-container">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <span class="timeline-time">07:00 PM - 07:45 PM</span>
+                  <h3 style="color: #fff; margin-bottom: 6px;">Grand Opening & Divine Ganesh Vandana</h3>
+                  <p style="font-size: 14px; color: var(--text-muted);">Inaugural lamp lighting, auspicious stuti
+                    recitations, and welcoming traditional orchestra performance.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <span class="timeline-time">07:45 PM - 09:15 PM</span>
+                  <h3 style="color: #fff; margin-bottom: 6px;">Traditional Garba & Authentic Raas</h3>
+                  <p style="font-size: 14px; color: var(--text-muted);">Circle garba dance led by renowned Gujarati folk
+                    artists and live dhol ensemble.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <span class="timeline-time">09:15 PM - 09:45 PM</span>
+                  <h3 style="color: #fff; margin-bottom: 6px;">Maha Aarti & Lamp Ceremony</h3>
+                  <p style="font-size: 14px; color: var(--text-muted);">1,000+ lamp divine Aarti worship ceremony
+                    accompanied by devotional chants and prasad distribution.</p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card">
+                  <span class="timeline-time">09:45 PM - 11:30 PM</span>
+                  <h3 style="color: #fff; margin-bottom: 6px;">Celebrity Fusion Garba & Star Performances</h3>
+                  <p style="font-size: 14px; color: var(--text-muted);">High-energy modern fusion Garba session with
+                    guest singers, DJ beats, and award announcements.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================================== -->
+          <!-- 4. PAST EVENTS VIEW -->
+          <!-- =================================================================== -->
+          <section id="view-past-events" class="page-view">
+            <div class="section-header">
+              <h2 class="gold-gradient-text">Past Event Highlights</h2>
+              <p>Explore memories, celeb appearances, and divine Aarti moments from previous celebrations.</p>
+            </div>
+
+            <!-- Category Filter Chips -->
+            <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px;">
+              <button class="btn btn-secondary btn-sm gallery-filter-chip active" data-category="All">All
+                Highlights</button>
+              <button class="btn btn-secondary btn-sm gallery-filter-chip" data-category="Garba Nights">Garba
+                Nights</button>
+              <button class="btn btn-secondary btn-sm gallery-filter-chip" data-category="Fashion & Culture">Fashion &
+                Attire</button>
+              <button class="btn btn-secondary btn-sm gallery-filter-chip" data-category="Divine Aarti">Maha
+                Aarti</button>
+              <button class="btn btn-secondary btn-sm gallery-filter-chip"
+                data-category="Celebrity Guests">Celebrities</button>
+              <button class="btn btn-secondary btn-sm gallery-filter-chip" data-category="Food & Stalls">Food
+                Court</button>
+            </div>
+
+            <div class="gallery-grid" id="past-events-gallery-grid">
+              <!-- Rendered by JS -->
+            </div>
+          </section>
+
+          <!-- =================================================================== -->
+          <!-- 5. BOOKING PASS VIEW -->
+          <!-- =================================================================== -->
+          <section id="view-booking" class="page-view">
+            <div style="max-width: 650px; margin: 0 auto;">
+              <div class="section-header">
+                <h2 class="gold-gradient-text">Book Your BEDLU Pass</h2>
+                <p>Instant Digital Pass with HMAC QR Code, Razorpay payment verification & cloud sync.</p>
+              </div>
+
+              <div class="glass-card">
+                <form id="pass-booking-form" onsubmit="app.handleBookingSubmit(event)">
+                  <div class="form-group">
+                    <label>Select Pass Tier</label>
+                    <select id="booking-tier-select" class="form-control" onchange="app.onTierChange(this.value)">
+                      <option value="season">Festival Pass — ₹2,999 (Best Value)</option>
+                      <option value="single">Single Night Pass — ₹499</option>
+                      <option value="vip">VIP Lounge Pass — ₹6,999</option>
+                      <option value="family">Family / Group Pass (4 Pax) — ₹8,999</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Number of Passes</label>
+                    <input type="number" id="booking-quantity" class="form-control" min="1" max="10" value="1"
+                      onchange="app.updateBookingSummary()" />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Primary Attendee Name</label>
+                    <input type="text" id="booking-attendee-name" class="form-control" required
+                      placeholder="Aarav Sharma" />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Attendee Email (For Digital Pass & Receipt)</label>
+                    <input type="email" id="booking-attendee-email" class="form-control" required
+                      placeholder="aarav@example.com" />
+                  </div>
+
+                  <div class="form-group">
+                    <label>Attendee Mobile Number</label>
+                    <input type="tel" id="booking-attendee-phone" class="form-control" required
+                      placeholder="+91 98765 43210" />
+                  </div>
+
+                  <!-- Order Total Box -->
+                  <div
+                    style="background: rgba(255,215,0,0.06); border: 1px solid var(--gold-primary); border-radius: var(--radius-sm); padding: 15px; margin: 20px 0; display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <small style="color: var(--text-muted);">TOTAL PAYABLE</small>
+                      <h3 id="booking-summary-total"
+                        style="color: var(--gold-primary); font-size: 24px; font-weight: 900;">₹2,999</h3>
+                    </div>
+                    <small style="color: #10b981; font-weight: 700;">✓ Razorpay Gateway Ready</small>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    💳 Proceed to Secure Payment & Generate Pass
+                  </button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================================== -->
+          <!-- 6. GATE SCANNER VIEW -->
+          <!-- =================================================================== -->
+          <section id="view-scanner" class="page-view">
+            <div class="scanner-container">
+              <div class="section-header">
+                <h2 class="gold-gradient-text">Gate Entry Scanner & Verification</h2>
+                <p>Scan visitor QR code or enter Pass ID to validate entry and enforce 1-time gate security.</p>
+              </div>
+
+              <div class="glass-card">
+                <!-- Live Device Camera Controls & Video Feed -->
+                <div style="display: flex; gap: 10px; justify-content: center; margin-bottom: 15px;">
+                  <button class="btn btn-secondary btn-sm" id="btn-toggle-camera"
+                    onclick="gateScanner.toggleCameraStream()">
+                    📷 Start Live Device Camera
+                  </button>
+                </div>
+
+                <div id="camera-reader-box"
+                  style="display: none; margin-bottom: 20px; border-radius: 12px; overflow: hidden; border: 2px solid var(--border-gold); background: #000;">
+                  <div id="qr-reader" style="width: 100%;"></div>
+                </div>
+
+                <!-- Camera Feed Simulator Box (Default Standby) -->
+                <div class="scanner-video-box" id="scanner-standby-box"
+                  style="background: rgba(0,0,0,0.4); padding: 30px; border-radius: 12px; border: 1px dashed var(--glass-border);">
+                  <div style="color: #aaa; text-align: center;">
+                    <div style="font-size: 40px; margin-bottom: 10px;">📷</div>
+                    <p>Gate Scanner Ready</p>
+                    <small>Click 'Start Live Device Camera' above or enter Pass ID manually</small>
+                  </div>
+                </div>
+
+                <!-- Manual Code Input & Scan Trigger -->
+                <div style="display: flex; gap: 10px; margin: 20px 0;">
+                  <input type="text" id="scanner-input-code" class="form-control"
+                    placeholder="Scan QR string or enter Pass ID (e.g. PASS-NVR-2026-90812-1)" />
+                  <button class="btn btn-primary" id="scanner-manual-submit-btn">Verify Entry</button>
+                </div>
+
+                <!-- Quick Test Sample Buttons -->
+                <div
+                  style="background: rgba(255,255,255,0.03); padding: 12px; border-radius: var(--radius-sm); margin-bottom: 20px;">
+                  <small
+                    style="color: var(--gold-primary); font-weight: bold; display: block; margin-bottom: 8px;">QUICK
+                    TEST SIMULATIONS:</small>
+                  <div style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
+                    <button class="btn btn-secondary btn-sm quick-scan-sample-btn" data-code="PASS-NVR-2026-90812-2">
+                      🟢 Test Valid Unused Pass
+                    </button>
+                    <button class="btn btn-secondary btn-sm quick-scan-sample-btn" data-code="PASS-NVR-2026-90812-1">
+                      🔴 Test Duplicate Scan (Already Used)
+                    </button>
+                    <button class="btn btn-secondary btn-sm quick-scan-sample-btn"
+                      data-code="INVALID-FAKE-QR-TOKEN-999">
+                      ⛔ Test Counterfeit Code
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Scan Outcome Output Box -->
+                <div id="scanner-result-box" class="scan-result-card valid"
+                  style="display: block; background: rgba(255,255,255,0.04); padding: 18px; border-radius: 12px; border: 1px solid var(--glass-border);">
+                  <div class="result-header">
+                    <h3 style="color: #fff;">System Scanner Ready</h3>
+                    <span class="status-chip">STANDBY</span>
+                  </div>
+                  <p class="result-msg" style="color: var(--text-muted); margin-top: 6px;">Ready to scan visitor passes
+                    at Gate 01.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================================== -->
+          <!-- 7. CONTACT US VIEW -->
+          <!-- =================================================================== -->
+          <section id="view-contact" class="page-view">
+            <div class="section-header">
+              <h2 class="gold-gradient-text">Contact Event Support</h2>
+              <p>Have questions regarding BEDLU passes, corporate bookings, or stall allocation?</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+              <!-- Contact Form -->
+              <div class="glass-card">
+                <h3>Send Us a Message</h3>
+                <form id="contact-form-element" onsubmit="app.handleContactSubmit(event)" style="margin-top: 20px;">
+                  <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" id="contact-name" class="form-control" required placeholder="Suresh Shah" />
+                  </div>
+                  <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="contact-email" class="form-control" required
+                      placeholder="suresh@example.com" />
+                  </div>
+                  <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" id="contact-subject" class="form-control" required
+                      placeholder="Bulk Ticket Enquiry" />
+                  </div>
+                  <div class="form-group">
+                    <label>Message</label>
+                    <textarea id="contact-message" class="form-control" rows="4" required
+                      placeholder="Write your query here..."></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+                </form>
+              </div>
+
+              <!-- Venue Info & Contact Details (Sidhpur) -->
+              <div class="glass-card">
+                <h3>Event Location & Details</h3>
+                <p style="margin: 10px 0; font-size: 14px; color: var(--text-muted);">
+                  📍 <strong>Shreesthal English School Ground</strong><br />
+                  Near M.P High School, Nadi Road, Sidhpur, Gujarat 384151<br /><br />
+                  📞 <strong>Phone:</strong> +91 98765 43210 / +91 98123 45678<br />
+                  ✉️ <strong>Email:</strong> support@united18events.org
+                </p>
+
+                <div
+                  style="background: rgba(0,0,0,0.4); border-radius: var(--radius-sm); padding: 15px; margin: 15px 0;">
+                  <h4 style="color: var(--gold-primary); margin-bottom: 8px;">Frequently Asked Questions</h4>
+                  <details style="margin-bottom: 8px; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 13px;">Are digital QR passes acceptable on mobile
+                      phones?</summary>
+                    <p style="font-size: 12px; color: #aaa; margin-top: 5px;">Yes! You can show your digital pass
+                      directly on your smartphone screen at Gate 01.</p>
+                  </details>
+                  <details style="margin-bottom: 8px; cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 13px;">What is the pass transfer policy?</summary>
+                    <p style="font-size: 12px; color: #aaa; margin-top: 5px;">Passes can be used by family members or
+                      guests, but each QR code is strictly single-entry.</p>
+                  </details>
+                  <details style="cursor: pointer;">
+                    <summary style="font-weight: 600; font-size: 13px;">Is parking available at the venue?</summary>
+                    <p style="font-size: 12px; color: #aaa; margin-top: 5px;">Yes, free general parking is provided with
+                      all passes.</p>
+                  </details>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- =================================================================== -->
+          <!-- 8. ADMIN ANALYTICS DASHBOARD VIEW -->
+          <!-- =================================================================== -->
+          <section id="view-admin" class="page-view">
+            <div class="section-header"
+              style="text-align: left; display: flex; justify-content: space-between; align-items: flex-end;">
+              <div>
+                <h2 class="gold-gradient-text">BEDLU Admin Live Operations Dashboard</h2>
+                <p>Real-time transaction stream, gate entry counts, and security threat monitor.</p>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span id="admin-live-pulse"
+                  style="width: 10px; height: 10px; border-radius: 50%; background: #10b981; display: inline-block;"></span>
+                <small style="color: #10b981; font-weight: bold;">LIVE WEBSOCKET STREAM</small>
+              </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="admin-grid"
+              style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 30px;">
+              <div class="glass-card">
+                <small style="color: var(--text-muted);">TOTAL REVENUE (NET)</small>
+                <div class="kpi-val" id="kpi-total-revenue"
+                  style="font-size: 26px; font-weight: 900; color: var(--gold-primary);">₹0</div>
+                <small style="color: #10b981;">✓ Razorpay Captured</small>
+              </div>
+              <div class="glass-card">
+                <small style="color: var(--text-muted);">PASSES ISSUED</small>
+                <div class="kpi-val" id="kpi-passes-sold"
+                  style="font-size: 26px; font-weight: 900; color: var(--magenta-neon);">0</div>
+                <small style="color: #a78bfa;">Active QR Tokens</small>
+              </div>
+              <div class="glass-card">
+                <small style="color: var(--text-muted);">GATE ATTENDANCE</small>
+                <div class="kpi-val" id="kpi-scanned-count" style="font-size: 26px; font-weight: 900; color: #60a5fa;">0
+                </div>
+                <small style="color: #60a5fa;">Scanned at Gate 01</small>
+              </div>
+              <div class="glass-card">
+                <small style="color: var(--text-muted);">TURNOUT RATE</small>
+                <div class="kpi-val" id="kpi-attendance-rate"
+                  style="font-size: 26px; font-weight: 900; color: var(--saffron-bright);">0%</div>
+                <small style="color: var(--saffron-bright);">Turnout Percentage</small>
+              </div>
+            </div>
+
+            <!-- Recent Transactions & Gate Stream -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 30px;">
+              <div class="glass-card">
+                <h3>Live Razorpay Payment Transactions</h3>
+                <div style="overflow-x: auto;">
+                  <table class="data-table">
+                    <thead>
+                      <tr>
+                        <th>Payment ID</th>
+                        <th>Attendee</th>
+                        <th>Pass Tier</th>
+                        <th>Amount</th>
+                        <th>Method</th>
+                        <th>Status</th>
+                        <th>Time</th>
+                      </tr>
+                    </thead>
+                    <tbody id="admin-transactions-body">
+                      <!-- JS Populated -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="glass-card">
+                <h3>Gate Scanner Feed</h3>
+                <div id="admin-gatelog-stream">
+                  <!-- JS Populated -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Audit Logs Table -->
+            <div class="glass-card" style="margin-bottom: 30px;">
+              <h3>Security Audit & Threat Event Logs</h3>
+              <div style="overflow-x: auto;">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Time</th>
+                      <th>Severity</th>
+                      <th>Event Type</th>
+                      <th>Actor</th>
+                      <th>Details</th>
+                      <th>IP Address</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-audit-log-body">
+                    <!-- JS Populated -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- System Architecture & Security Blueprint (Admin Only) -->
+            <div class="glass-card">
+              <h3>🛡️ System Architecture & Security Controls (Admin Inspector)</h3>
+              <div
+                style="background: #080312; border: 1px solid var(--glass-border); padding: 20px; border-radius: var(--radius-sm); margin-top: 15px; overflow-x: auto;">
+                <div
+                  style="display: flex; align-items: center; justify-content: space-between; min-width: 750px; text-align: center; gap: 10px;">
+                  <div
+                    style="background: rgba(255,215,0,0.1); border: 1px solid var(--gold-primary); padding: 12px; border-radius: 8px; width: 130px;">
+                    <strong style="color: var(--gold-primary); font-size: 12px;">FRONTEND UI</strong>
+                    <div style="font-size: 11px; margin-top: 4px; color: #aaa;">HTML5 / CSS3<br />Vanilla JS</div>
+                  </div>
+                  <span style="color: var(--gold-primary); font-weight: bold;">➔</span>
+                  <div
+                    style="background: rgba(233,30,99,0.1); border: 1px solid var(--magenta-neon); padding: 12px; border-radius: 8px; width: 140px;">
+                    <strong style="color: var(--magenta-neon); font-size: 12px;">SECURITY & AUTH</strong>
+                    <div style="font-size: 11px; margin-top: 4px; color: #aaa;">JWT Session<br />WebCrypto HMAC</div>
+                  </div>
+                  <span style="color: var(--gold-primary); font-weight: bold;">➔</span>
+                  <div
+                    style="background: rgba(16,185,129,0.1); border: 1px solid #10b981; padding: 12px; border-radius: 8px; width: 140px;">
+                    <strong style="color: #10b981; font-size: 12px;">GATE SCANNER</strong>
+                    <div style="font-size: 11px; margin-top: 4px; color: #aaa;">HTML5 QR Camera<br />1-Time Redeem</div>
+                  </div>
+                  <span style="color: var(--gold-primary); font-weight: bold;">➔</span>
+                  <div
+                    style="background: rgba(59,130,246,0.1); border: 1px solid #60a5fa; padding: 12px; border-radius: 8px; width: 140px;">
+                    <strong style="color: #60a5fa; font-size: 12px;">CLOUD BACKEND</strong>
+                    <div style="font-size: 11px; margin-top: 4px; color: #aaa;">Supabase Postgres<br />Razorpay Gateway
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+  </main>
+
+  <!-- =================================================================== -->
+  <!-- DIGITAL PASS TICKET MODAL -->
+  <!-- =================================================================== -->
+  <div id="modal-pass-view" class="modal-overlay"
+    style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); backdrop-filter: blur(12px); z-index: 10000; align-items: center; justify-content: center; padding: 20px;">
+    <div
+      style="background: var(--bg-dark); border: 2px solid var(--gold-primary); border-radius: var(--radius-lg); max-width: 680px; width: 100%; max-height: 90vh; overflow-y: auto; padding: 25px; position: relative; box-shadow: var(--shadow-gold);">
+      <button onclick="document.getElementById('modal-pass-view').style.display = 'none'"
+        style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px;">✕</button>
+
+      <div id="modal-pass-content-container">
+        <!-- Rendered dynamically by pdfPass.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/utils/constants.js"></script>
+  <script src="js/utils/helpers.js"></script>
+  <script src="js/core/config.js"></script>
+  <script src="js/core/supabase.js"></script>
+  <script src="js/core/db.js"></script>
+  <script src="js/core/auth.js"></script>
+  <script src="js/booking/validation.js"></script>
+  <script src="js/booking/attendees.js"></script>
+  <script src="js/booking/booking.js"></script>
+  <script src="js/payment/payment.js"></script>
+  <script src="js/pass/qr.js"></script>
+  <script src="js/pass/pdf.js"></script>
+  <script src="js/pass/email.js"></script>
+  <script src="js/scanner/scanner.js"></script>
+  <script src="js/admin/dashboard.js"></script>
+  <script src="js/core/app.js"></script>
+
+  <!-- Animated Preloader Script (2.5 seconds) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const loader = document.getElementById("app-loader");
+      const fill = document.getElementById("app-loader-fill");
+      let progress = 0;
+
+      const interval = setInterval(() => {
+        progress += 4;
+        if (fill) fill.style.width = progress + "%";
+        if (progress >= 100) {
+          clearInterval(interval);
+          setTimeout(() => {
+            if (loader) loader.classList.add("fade-out");
+          }, 300);
+        }
+      }, 80);
+    });
+  </script>
+</body>
+
+</html>
